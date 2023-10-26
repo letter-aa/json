@@ -36,6 +36,13 @@ namespace json {
 		}
 		if (str.find(',') != string::npos){
 		    stringX::splitString(str,com,",");
+		} else {
+		    if (str.find(':') != string::npos){
+                	stringX::splitString(str,col,":");
+            	    } else {
+                	cout << "invalid json syntax. missing \":\" in " << str << ", pos: " << str.find("\"",str.find("\"") + 1) + 1 << endl;
+                	invalid = true;
+            	    }
 		}
 		if (((com.size()) != 0) && (invalid == false)){
 		    for (string&data : com){
