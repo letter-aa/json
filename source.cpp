@@ -43,7 +43,7 @@ namespace json {
 		        if (data.find(':') != string::npos){
 		            stringX::splitString(data,col,":");
 		        } else {
-		            cout << "invalid json syntax. missing \":\" in " << str << ", pos: " << str.find("\"",str.find(data) + 1) << endl;
+		            cout << "invalid json syntax. missing \":\" in " << str << ", pos: " << str.find("\"",str.find(data) + 1) + 1 << endl;
 		            invalid = true;
 		        }
 		    }
