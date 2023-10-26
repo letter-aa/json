@@ -52,7 +52,7 @@ namespace json {
 		        cout << "invalid json syntax. missing \",\" in " << str << ", pos: " << str.find("\"",str.find(":") + 1) << endl;
 		        invalid = true;
 		    } else {
-		        stringX::splitString(data,col,":");
+		        stringX::splitString(str,col,":");
 		    }
 		}
 		if (((col.size()) != 0) && (invalid == false)){
